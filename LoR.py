@@ -39,7 +39,7 @@ scaler = StandardScaler()
 scaler.fit(X_train)
 scaled_data = scaler.transform(X_train)
 from sklearn.decomposition import PCA
-pca = PCA(n_components=4)
+pca = PCA(n_components=1)
 pca.fit(scaled_data)
 xtrain_pca = pca.transform(scaled_data) 
 xtest_pca=pca.transform(scaler.transform(X_test))
